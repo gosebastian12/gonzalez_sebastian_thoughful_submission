@@ -6,6 +6,7 @@ prototype_nbs/*
 *.txt
 !solution.txt
 !requirements.txt
+!explanation.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
