@@ -1,5 +1,9 @@
 # virtual environment directory
 thoughtful_env/*
+prototype_nbs/*
+
+# ensure any local large data files are not tracked
+*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
