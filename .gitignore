@@ -5,6 +5,7 @@ prototype_nbs/*
 # ensure any local large data files are not tracked
 *.txt
 !solution.txt
+!requirements.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
