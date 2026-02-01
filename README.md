@@ -3,7 +3,7 @@ The main design of this solution hinges on a line-by-line reading of a file-syst
 
 The feasability of this approach is reliant on the `.txt` file being pre-sorted. That is, the ordering of the transactions for a `claim_id` is specified by the ordering of the lines in the file AND all of those claim transactions are found in the same section of the file. These assumptions were made because there were no timestamp values given. Additionally, it seemed plausable for a Data Engineering pipeline/process generating such a `.txt` file to ensure such ordering. Future improvements could center on enabling the approach to work when transactions for a `claim_id` are scattered randomly throughout the contents of the `.txt` file.
 
-Of note is that the script only takes around 30 to 60 seconds to complete for the GCloud-provided `large_input_v1.txt` file. This is part because once all cycles are identified, a Pandas-written array based approach is used to quickly find the longest one.
+Of note is that the script only takes around 30 to 60 seconds to complete for the GCloud-provided `large_input_v1.txt` file. This is part because once all cycles are identified, a Pandas-written array based approach is used to quickly find the longest one amongst the ~360,000 identified cycles.
 
 Additional assumptions to higlight are:
 1. If there is an intermediate transaction with a `destination_system` that matches the original `source_system`, *but* the **final** `destination_system` is different, the chain of transactions is NOT a cycle.
